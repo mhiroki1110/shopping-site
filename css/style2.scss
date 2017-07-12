@@ -30,6 +30,8 @@ header {
   }
   
   @media(min-width: 550px) {
+    
+    padding-bottom: 40px;
     .sp_logo {
       display: none;
     }
@@ -38,6 +40,7 @@ header {
     }
   }
   
+    
   .sp_logo {
     text-align: center;
     padding-top: 15px;
@@ -93,30 +96,45 @@ header {
   
   background: $lgray;
   
+  .pankuzulist {
+    
+    background: $mgray;
+    color: $brown;
+    padding: 10px 0px 10px 10px;
+    
+    @media (max-width: 549px) {
+      margin-bottom: 15px;
+    }
+    
+    @media (min-width: 550px) {
+      margin-bottom: 10px;
+    }  
+    
+    ol li {
+      display: inline;
+      list-style: none;
+    }
+  }
+  
+  .pankuzulist ol li:before {
+    content:" / ";
+  }
+      
+  .pankuzulist ol li:first-child:before {
+    content: none;      
+  }
+  
   .cover_area {
-    
-    @media(min-width: 550px) {
-      padding-top: 40px;
-    }
-
-  }
-  
-  .pc_newitems_title {
-    padding: 30px 0;
-    
     @media(max-width: 549px) {
-      display: none;
+      .pc_cover{
+        display: none;
+      }
     }
-  }
-  
-  .sp_newitems_title {
-    padding: 15px 0;
-    display: block;
-    margin: 0 auto;
-    // メモ：imgはブロック要素ではないので、text-align centerは効かない
   
     @media(min-width: 550px) {
-      display: none;
+      .sp_cover {
+        display: none;
+      }
     }
   }
   
@@ -126,28 +144,22 @@ header {
     
     .flex_box {
       @include display-flex;
-      @include flex-wrap(wrap);
       @include justify-content(space-between);
-      // メモ：@include→compassを使用（冒頭でインポートも忘れず）
-      //       flex-wrap→flex内で自動的に改行してくれるプロパティ
-      //       justify-content→flexboxを左右端から等間隔(between)で配置、ボックス間に隙間を空けるために指定
-      
-  
+      @include flex-wrap(wrap);
+
       .newitems {
         background: white;
         text-align: center;
-        // @include flex(1);
         padding: 10px;
+        // @include flex(1);
         
         @media (min-width: 550px) {
           width: 30%;
-          .items3 ~ .newitems {
-            margin-top: 4px;
-          }
         }
-        
+          
         @media (max-width: 549px) {
           width: 44%;
+            
         } 
       }
       
@@ -157,55 +169,72 @@ header {
     }
   }
   
-  .pc_popularitems_title {
-    padding: 30px 0;
+  .recentryitem_area {
     
     @media(max-width: 549px) {
-      display: none;
+      
+      width: 100%;
+      
+      .pc_title{
+        display: none;
+      }
+      .sp_title {
+        padding: 20px 0;
+        background: $lgray;
+        text-align: center;
+      }
     }
-  }
-  
-  .sp_popularitems_title {
-    padding: 15px 0;
-    display: block;
-    margin: 0 auto;
   
     @media(min-width: 550px) {
-      display: none;
+      .sp_title {
+        display: none;
+      }
+      .pc_title {
+        padding: 30px 0;
+        background: $lgray;
+      }
     }
-  }
   
-  .popularitem_area {
-    
-  background: $lgray;
-    
-    .flex_box {
-      @include display-flex;
-      @include flex-wrap(wrap);
-      @include justify-content(space-between);
-  
-      .popularitems {
-        background: white;
-        text-align: center;
-        // @include flex(1);
-        padding: 10px;
-        
-        @media (min-width: 550px) {
-          width: 30%;
-        }
+    .recentryitem_list {
+      
+    background: $lgray;
+      
+      .flex_box {
+        @include display-flex;
+        @include justify-content(space-between);
         
         @media (max-width: 549px) {
-          width: 44%;
-        } 
+          @include flex-wrap(wrap);
+        }
+  
+        .popularitems {
+          background: white;
+          text-align: center;
+          padding: 10px;
+          // @include flex(1);
+          
+          @media (min-width: 550px) {
+            width: 30%;
+          }
+          
+          @media (max-width: 549px) {
+            width: 44%;
+            
+            .item_img {
+              width: 98%;
+            }
+          } 
+            
+        }
+        
+        .popularitems p{
+          text-align: left;
+        }
+        
       }
-      
-      .popularitems p{
-        text-align: left;
-      }
-      
     }
   }
-
+  
   .pc_shoppingguide_title {
     padding: 30px 0;
     
@@ -215,10 +244,10 @@ header {
   }
   
   .sp_shpppingguide_title {
-    padding: 15px 0;
+    padding: 30px 0 15px 0;
     display: block;
     margin: 0 auto;
-  
+
     @media(min-width: 550px) {
       display: none;
     }
@@ -244,9 +273,9 @@ header {
         @include align-content (bitween);
         
         .shopping + .shopping {
-          margin-top: 4px;
-        // スマホ表示で立て並べの際、二つ目のshoppingだけにmargin-topを設定して隙間をつくる
+          margin-top: 4px;  
         }
+        
       }
       
       .shopping {
@@ -282,18 +311,14 @@ header {
       padding: 10px 0px 10px 10px;
     }
   }
-  
+
   .right_area {
-    
-    @media(min-width: 550px) {
-      padding-top: 40px;
-    }
-    
+
     .search_area {
     
       background: white;
       
-      @media (max-width: 550px){
+      @media (max-width: 549px){
         margin-top: 15px;
       }
     
@@ -333,7 +358,7 @@ header {
       
       .next_white {
         margin-left: auto;
-        padding: 18px 15px 18px 0px;
+        padding: 20px 15px 20px 0px;
       }
       
     }
@@ -427,6 +452,7 @@ a{
 
 p {
   margin: 0;
+  padding: 0;
 }
 
 ul{
@@ -439,4 +465,12 @@ li{
 
 form {
   margin-bottom: 0;
+}
+
+ol {
+  margin-bottom: 0;
+}
+
+table {
+  margin: 0;
 }
