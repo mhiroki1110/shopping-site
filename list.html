@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html land="ja">
+<html lang="ja">
 <head>
 
     <!-- Basic Page Needs
@@ -38,6 +38,7 @@
     <!-- 追加するJS -->
     <script src="test-carousel.js"></script>
     <script src="slideToggle.js"></script>
+    <script src="slideToggle2.js"></script>
 
 </head>
 
@@ -170,6 +171,11 @@
               </div>
             </div>
           </div>
+          
+          <div class="back_next">
+            <div class="text"><p>BACK</p></div>
+            <div class="text"><p>NEXT</p></div>
+          </div>  
             
           <div class="recentryitem_area">
             <div class="pc_title"><img class="u-max-full-width" src="images/list/recent_pro_pc.png" alt="" /></div>
@@ -195,8 +201,8 @@
             </div>
           </div>
     
-            <img class="pc_shoppingguide_title" class="u-max-full-width" src="images/top/title_guide.png" alt="title_guide" >
-            <img class="sp_shpppingguide_title" class="u-max-full-width" src="images/top_sp/title_guide.png" alt="title_guide" srcset="images/top_sp/title_guide@2x.png" >
+          <img class="pc_shoppingguide_title u-max-full-width" src="images/top/title_guide.png" alt="title_guide" >
+          <img class="sp_shpppingguide_title u-max-full-width" src="images/top_sp/title_guide.png" alt="title_guide" srcset="images/top_sp/title_guide@2x.png" >
             <div class="shoppingguide_area">
               <div class="flex_box">
                 <div class="shopping">
@@ -218,14 +224,13 @@
                 </div>
               </div>
             </div>
-          </div><!--product_area-->
         </div><!--left_area-->
         
         <div class="three columns right_area">
           <div class="search_area">
             <img class="search_title u-max-full-width" src="images/top/itemserch.png" alt="search" />
             <form>
-              <input type="text" class="search_form" name="search" placeholder="Search..">
+               <input type="text" class="search_form" name="search" placeholder="Search..">
             </form>
           </div>
           
@@ -234,18 +239,18 @@
             <img class="next_white u-max-full-width" src="images/top/next_icon.png" alt="next" />
           </div>
           
-          <div class="categories_area right_menus">
-            <img class="categories_title title_brown u-max-full-width"  src="images/top/categories.png" alt="category" />
-            <img class="next_white u-max-full-width" src="images/top/next_icon.png" alt="next" />
-            <!--<ul class="category_toggle">-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--</ul>-->
+          <div id="toggle_btn" class="categories_area right_menus">
+            <img class="categories_title title_brown u-max-full-width"  src="images/top/categories.png" alt="category" >
+            <img id="change_btn" class="next_white u-max-full-width" src="images/top/down_icon.png" alt="next" >
           </div>
+            <ul class="category_toggle">
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>        
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+            </ul>
           
           <div class="about_title_area right_menus">
             <img class="about_title title_brown" src="images/top/about.png" alt="about" >
@@ -285,7 +290,6 @@
       </div><!--low-->
     </div><!--container-->
   </div> <!--main-->
-</body>
 
 <footer>
   <div class="container">
@@ -298,4 +302,5 @@
   </div>
 </footer>
 
+</body>
 </html>

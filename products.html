@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html land="ja">
+<html lang="ja">
 <head>
 
     <!-- Basic Page Needs
@@ -38,6 +38,8 @@
     <!-- 追加するJS -->
     <script src="test-carousel.js"></script>
     <script src="slideToggle.js"></script>
+    <script src="slideToggle2.js"></script>
+    <script src="slideshow.js"></script>
 
 </head>
 
@@ -143,7 +145,7 @@
               </div>
             </div>
           
-            <img class="color_size_title" class="u-max-full-width" src="images/products/title_color.png" alt="title_color" >
+            <img class="color_size_title u-max-full-width" src="images/products/title_color.png" alt="title_color" >
             <div class="color_size">
               <table>
                 <tr>
@@ -165,20 +167,20 @@
                   <div class="inner_flex_box">
                     <div class="price">
                       <div class="flex_box">
-                        <img class="price_title u-max-full-width" src="images/products/title_price.png">
+                        <img class="price_title u-max-full-width" src="images/products/title_price.png" alt="" >
                         <div class="pricies"><p><i><span class="thousand">¥1,000</span> (tax in)</i></p></div>
                       </div>
                     </div>
                     <div class="quantity">
                       <div class="flex_box">
-                        <img class="quantity_title u-max-full-width" src="images/products/title_quantity.png">
+                        <img class="quantity_title u-max-full-width" src="images/products/title_quantity.png" alt="" >
                         <div class="square"></div>
                       </div>
                     </div>
                   </div><!--inner_flex_box-->
                 </div>
                 <div class="cart">
-                  <img class="cart_img u-max-full-width" src="images/products/add_to_cart.png">
+                  <img class="cart_img u-max-full-width" src="images/products/add_to_cart.png" alt="" >
                 </div>  
               </div> <!--outer_flex_box-->
             </div>
@@ -209,17 +211,17 @@
              <div class="recentryitem_list">
               <div class="flex_box">
                 <div class="popularitems">
-                  <img class="item_img" src="images/top/item_07.jpg" alt="item7" />
+                  <img class="u-max-full-width" src="images/top/item_07.jpg" alt="item7" />
                   <p>商品名が入ります商品名がはいります商品名がはいります</p>
                   <p>¥10,000(tax in)</p>
                 </div>
                 <div class="popularitems">
-                  <img class="item_img" src="images/top/item_08.jpg" alt="item8" />
+                  <img class="u-max-full-width" src="images/top/item_08.jpg" alt="item8" />
                   <p>商品名が入ります商品名がはいります商品名がはいります</p>
                   <p>¥10,000(tax in)</p>
                 </div>
                 <div class="popularitems">
-                  <img class="item_img" src="images/top/item_09.jpg" alt="item9" />
+                  <img class="u-max-full-width" src="images/top/item_09.jpg" alt="item9" />
                   <p>商品名が入ります商品名がはいります商品名がはいります</p>
                   <p>¥10,000(tax in)</p>
                 </div>
@@ -227,8 +229,8 @@
             </div>
           </div>
     
-            <img class="pc_shoppingguide_title" class="u-max-full-width" src="images/top/title_guide.png" alt="title_guide" >
-            <img class="sp_shpppingguide_title" class="u-max-full-width" src="images/top_sp/title_guide.png" alt="title_guide" srcset="images/top_sp/title_guide@2x.png" >
+            <img class="pc_shoppingguide_title u-max-full-width" src="images/top/title_guide.png" alt="title_guide" >
+            <img class="sp_shpppingguide_title u-max-full-width" src="images/top_sp/title_guide.png" alt="title_guide" srcset="images/top_sp/title_guide@2x.png" >
             <div class="shoppingguide_area">
               <div class="flex_box">
                 <div class="shopping">
@@ -250,7 +252,6 @@
                 </div>
               </div>
             </div>
-          </div><!--product_area-->
         </div><!--left_area-->
         
         <div class="three columns right_area">
@@ -266,18 +267,18 @@
             <img class="next_white u-max-full-width" src="images/top/next_icon.png" alt="next" />
           </div>
           
-          <div class="categories_area right_menus">
-            <img class="categories_title title_brown u-max-full-width"  src="images/top/categories.png" alt="category" />
-            <img class="next_white u-max-full-width" src="images/top/next_icon.png" alt="next" />
-            <!--<ul class="category_toggle">-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--  <li><a href="">カテゴリー名</a></li><img id="next_icon" src="images/top/next_icon_gray.png" alt="next" />-->
-            <!--</ul>-->
+          <div id="toggle_btn" class="categories_area right_menus">
+            <img class="categories_title title_brown u-max-full-width"  src="images/top/categories.png" alt="category" >
+            <img id="change_btn" class="next_white u-max-full-width" src="images/top/down_icon.png" alt="next" >
           </div>
+            <ul class="category_toggle">
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>        
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+              <div class="flex_box"><li>カテゴリー名</li><img class="next_icon" src="images/top/next_icon_gray.png" alt="next" ></div>
+            </ul>
           
           <div class="about_title_area right_menus">
             <img class="about_title title_brown" src="images/top/about.png" alt="about" >
@@ -317,7 +318,6 @@
       </div><!--low-->
     </div><!--container-->
   </div> <!--main-->
-</body>
 
 <footer>
   <div class="container">
@@ -330,4 +330,5 @@
   </div>
 </footer>
 
+</body>
 </html>

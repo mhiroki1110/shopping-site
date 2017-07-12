@@ -54,6 +54,10 @@ header {
       cursor: pointer;
     }
     
+    #sp_instagram_btn {
+      margin: 0 10px;
+    }
+    
     .sp_navi_li {
        display: none;
        list-style: none;
@@ -262,6 +266,7 @@ header {
         .colored {
           background: $lgray;
           color: $brown;
+          text-align: center;
         }
         
         .square {
@@ -270,6 +275,7 @@ header {
           border: solid thin $mgray;
           margin-left: auto;
           margin-right: auto;
+          text-align: center;
         }
         
       }
@@ -488,7 +494,15 @@ header {
       .flex_box {
         @include display-flex;
         @include justify-content(space-between);
-        @include flex-wrap(wrap);
+        
+        @media (max-width: 549px) {
+          @include flex-wrap(wrap);
+         
+          .popularitems:nth-child(n + 3) {
+            margin-top: 6px;
+          }
+      
+        }
   
         .popularitems {
           background: white;
@@ -597,9 +611,12 @@ header {
     .search_area {
     
       background: white;
+      padding-bottom: 20px; //search_form下のmargin相殺現象回避
       
       @media (max-width: 549px){
         margin-top: 15px;
+        margin-bottom: 5px;
+        padding: 22px 0;
       }
     
     }
@@ -608,7 +625,7 @@ header {
       display: block;
       padding: 20px 0 0 20px;
       
-      @media (max-width: 550px){
+      @media (max-width: 549px){
         display: none;
       }
       
@@ -618,7 +635,17 @@ header {
       width: 80%;
       background: $lgray url('../images/top/search_icon.png') no-repeat right;
       border: none;
-      margin: 10px 0 20px 20px;
+      display: block;
+
+      @media (min-width: 550px) {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 549px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
     
     input::-webkit-input-placeholder {
@@ -640,6 +667,39 @@ header {
         margin-left: auto;
         padding: 20px 15px 20px 0px;
       }
+    }
+    
+    .pegelink_area {
+      @media (max-width: 549px) {
+        margin-top: 15px;
+      }
+    }
+    
+    #toggle_btn {
+      cursor: pointer;
+    }
+    
+    .category_toggle {
+      display: none;
+      list-style: none;
+      
+      .flex_box {
+        @include display-flex;
+        width: 100%;
+        background: white;
+        border-bottom: solid thin $lgray;
+      }
+      
+      li {
+        display: block;
+        padding: 20px 0 20px 15px;
+      }  
+      
+      .next_icon {
+        height: 15px;
+        padding: 20px 15px 20px 0px;
+        margin-left: auto;
+      }
       
     }
     
@@ -652,6 +712,9 @@ header {
       
       p {
         padding: 0 20px 0 10px;
+        @media (max-width: 549px) {
+          margin-top: 10px;
+        }
       }
       
       .more {
@@ -753,4 +816,8 @@ ol {
 
 table {
   margin: 0;
+}
+
+input {
+  margin-bottom: 0;
 }

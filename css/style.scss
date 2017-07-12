@@ -318,11 +318,12 @@ header {
     .search_area {
     
       background: white;
-      padding: 22px 0;
+      padding-bottom: 20px; //search_form下のmargin相殺現象回避
       
       @media (max-width: 549px){
         margin-top: 15px;
         margin-bottom: 5px;
+        padding: 22px 0;
       }
     
     }
@@ -344,7 +345,9 @@ header {
       display: block;
 
       @media (min-width: 550px) {
-        margin: 10px 0 20px 20px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
       }
       @media (max-width: 549px) {
         margin-left: auto;
@@ -356,7 +359,7 @@ header {
       color: $mgray;
     }
     // メモ：検索ボックス内のテキスト色の変更
-  
+    
     .right_menus {
       background: $brown;
       border: none;
@@ -373,6 +376,13 @@ header {
       }
       
     }
+    
+    .pegelink_area {
+      @media (max-width: 549px) {
+        margin-top: 15px;
+      }
+    }
+    //メモ：search下とのmargin相殺解消
     
     #toggle_btn {
       cursor: pointer;
@@ -510,4 +520,5 @@ form {
 
 input {
   margin-bottom: 0;
+  padding: 0;
 }

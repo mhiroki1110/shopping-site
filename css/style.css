@@ -188,11 +188,12 @@ header {
       padding-top: 40px; } }
   .main .right_area .search_area {
     background: white;
-    padding: 22px 0; }
+    padding-bottom: 20px; }
     @media (max-width: 549px) {
       .main .right_area .search_area {
         margin-top: 15px;
-        margin-bottom: 5px; } }
+        margin-bottom: 5px;
+        padding: 22px 0; } }
   .main .right_area .search_title {
     display: block;
     padding: 20px 0 0 20px; }
@@ -206,7 +207,9 @@ header {
     display: block; }
     @media (min-width: 550px) {
       .main .right_area .search_form {
-        margin: 10px 0 20px 20px; } }
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto; } }
     @media (max-width: 549px) {
       .main .right_area .search_form {
         margin-left: auto;
@@ -224,6 +227,9 @@ header {
     .main .right_area .right_menus .next_white {
       margin-left: auto;
       padding: 18px 15px 18px 0px; }
+  @media (max-width: 549px) {
+    .main .right_area .pegelink_area {
+      margin-top: 15px; } }
   .main .right_area #toggle_btn {
     cursor: pointer; }
   .main .right_area .category_toggle {
@@ -311,6 +317,7 @@ form {
   margin-bottom: 0; }
 
 input {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
