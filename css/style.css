@@ -248,6 +248,8 @@ header {
     list-style: none; }
     .main .right_area .category_toggle li {
       display: block;
+      font-size: 12px;
+      font-size: 1.2rem;
       padding: 18px 10px 18px 15px;
       background: white url("../images/top/next_icon_gray.png") no-repeat right 18px bottom 54%;
       border-bottom: solid thin #f9f8f6; }

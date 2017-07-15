@@ -67,7 +67,9 @@ header {
         margin-bottom: 10px; } }
     .main .pankuzulist ol li {
       display: inline;
-      list-style: none; }
+      list-style: none;
+      font-size: 11px;
+      font-size: 1.1rem; }
   .main .pankuzulist ol li:before {
     content: " / "; }
   .main .pankuzulist ol li:first-child:before {
@@ -274,7 +276,9 @@ header {
       font-size: 14px;
       font-size: 1.4rem; }
     .main .product_area .color_size2 {
-      margin-top: 25px; }
+      margin-top: 25px;
+      font-size: 12px;
+      font-size: 1.2rem; }
       .main .product_area .color_size2 table {
         width: 100%;
         border-collapse: collapse; }
@@ -453,6 +457,8 @@ header {
     list-style: none; }
     .main .right_area .category_toggle li {
       display: block;
+      font-size: 12px;
+      font-size: 1.2rem;
       padding: 18px 10px 18px 15px;
       background: white url("../images/top/next_icon_gray.png") no-repeat right 18px bottom 54%;
       border-bottom: solid thin #f9f8f6; }
